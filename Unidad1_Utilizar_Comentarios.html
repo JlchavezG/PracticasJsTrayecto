@@ -1,0 +1,225 @@
+<!--
+    Iscjlchavezg developer web 
+-->
+<!-- Tag en el cual se le indica al naegador la version de lenguaje de maquetado html5-->
+<!DOCTYPE html>
+<!-- tag con el cual se indica el lenguaje natural con el cual esta construida la pagina web  -->
+<html lang="es">
+<!-- Head es la cabezera del dcmuento web y controla la pestaña del navegador al igual que su configuración-->    
+<head>
+    <!-- Los metas sirven para especificar con mayor presición el contenido de la pagina web-->
+    <meta name="nombre-del-elemento" content="contenido">
+    <!--Es el metatag que el navegador interpreta como la codificación en los motores de busqueda
+    y el uso correcto del texto dentro de la región y lenguaje en el cual se desarrolla la pagina web-->
+    <meta charset="UTF-8">
+    <!-- Este tag genera una descripción de la pagina web asi como su contenido ayudando a los moteres
+    de busqueda a realizar su trabajo segun el contenido de la pagina-->
+    <meta name="description" content="Esta pagina es un ejemplo de como utilizar los comentarios dentro
+    de una pagina web utilizando los elementos y funciones para el navegador">
+    <!-- indica qué conjunto de caracteres se usa en el documento.
+    Es muy importante especificarlo porque de lo contrario, y por poner un ejemplo, no se podrían visualizar
+    las tildes y las diéresis que el idioma inglés no posee, pero que son muy importantes en el español o el 
+    alemán. Esta meta tag se coloca junto con los caracteres ISO si se usa el formato “text/html” o el “text/richtext”, 
+    separados por un punto y coma. -->
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+    <!-- Gracias a ella se le notifica a las arañas web o rastreadores qué información de la página deben analizar 
+    y cual deben ignorar.
+    -->
+    <meta name="robots" content="nofollow">
+    <!--Esta tag no ayudara a identificar al indexar el contenido y las plabras clave para encontrar el sitio web-->
+    <meta name="keywords" content="palabra clave 1, palabra clave 2, palabra clave 3"/>
+    <!--Este tag identifica y define el area de la pantalla dentro del documento, Nivel del escalado 
+    que puede realizar el usuario de la pagina web dentro del navegador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- El tag title mustra el titulo de la pagina web dentro del navegador y sirve para identificar el titulo 
+    dentro del seo y posicionamiento web-->
+    <title>Como utilizar los comentarios dentro de un documento web</title>
+</head>
+<!-- Etiqueta que muestra el cuerpo de la pagin aweb dentro del navegador, cuerpo de la pagina web-->
+<body>
+<!-- Etiqueta de navegación la cual permite crear un menu dentro de Html5 -->    
+<nav>
+    <!-- elemneto checkbox para crear menu responsive-->
+    <input type="checkbox" id="hamburgesa">
+    <!--Etiqueta para colocar texto correspondiente al checkbox -->
+    <label for="hamburgesa" class="checkbtn">
+        <i class="icon-menu"></i>
+    </label>
+    <!-- Link principal de la barra de menu-->
+    <a href="#" class="link">
+        <h4 class="logo">IscjlchavezG</h4>
+    </a>
+    <!-- Inicia la lista desordenada para los elementos del menu -->
+    <ul>
+        <!--Elementos de la lista ademas de colocar el link-->
+        <li>
+            <a class="active" href="#">Inicio</a>
+        </li>
+        <li>
+            <a  href="#">Maquetado</a>
+        </li>
+        <li>
+            <a  href="#">Css3</a>
+        </li>
+        <li>
+            <a href="#">JavaScript</a>
+        </li>
+    </ul>
+</nav>
+<!-- inicia el script de estilo con lenguaje css3-->
+<style>
+/* se declara el puntero para aplicar el estilo a todo el documento web */
+*{
+    /* espacio */
+    padding: 0;
+    /* margen */
+    margin: 0;
+    /* eliminar la decoracion del texto como lineas etc del link */
+    text-decoration: none;
+    /* eliminar el estilo de la lista */
+    list-style: none;
+    /* omar en cuenta para cualquier valor que se especifique de borde o 
+    de relleno para el ancho o alto de un elemento */
+    box-sizing: border-box;
+}
+/* aplicar configuracion a la etiqueta nav atravez de css3 */
+nav{
+    /* color de fondo del elemento */
+    background: #2049e0;
+    /* altura del elemento en pixel*/
+    height: 80px;
+    /* ancho en porcentaje*/
+    width: 100%;
+}
+/* aplicamos la comfiguracion a una clase utilizando el . y su identificador*/
+.link{
+    /* posicion del elemento total */
+    position: absolute;
+    /* espacio izquierda y abajo */
+    padding: 20px 50px;
+    /* color de texto blanco*/
+    color: #fff;
+    /* fuente y tamaño de fuente en pixel*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
+/* aplicamos la comfiguracion a una clase utilizando el . y su identificador*/
+.logo{
+    /* altura del elemento */
+    height: 40px;
+}
+/* aplicamos la comfiguracion a una clase utilizando el . y su identificador heredando a otro elemnto*/
+nav ul{
+    /* elemento flotando hacia la derecha */
+    float: right;
+    /* margen del elemento a la derecha en pixels */
+    margin-right: 20px;
+}
+/* aplicamos la comfiguracion a una clase utilizando el . y su identificador heredando a otro elemnto
+heredando a otroo elemento */
+nav ul li{
+    /* alineacion del elemento en la pantalla lineal - bloqueda */
+    display: inline-block;
+    /* altura de la alineacion */
+    line-height: 80px;
+    /* margen del elemento 0 derecha 5 pixels  */
+    margin: 0 5px;
+}
+/* aplicamos la comfiguracion a una clase utilizando el . y su identificador heredando a otro elemnto
+heredando a otroo elemento */
+nav ul li a{
+    /* color del texto balnco exadecimal   */
+    color: #fff;
+    /* tamaño de la fuente   */
+    font-size: 14px;
+    /* espacio entre elementos arriba y derecha  */
+    padding: 7px 13px;
+    /* transformar texto a mayusculas  */
+    text-transform: uppercase;
+    /* tipo de fuente  */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ /* configurar el lemento de la lista en su atributo de link , tomando la clase active y el parametro hover 
+ sobre el elemento */
+ li a.active, li a:hover{
+    /* color del borde blanco */
+    border-color: #fff;
+    /* borde inferior  */
+    border-bottom: 2px solid;
+    /* tiempo de transicion */
+    transition: .5s;
+ }
+  /* configuracion del elemento checkbtn  */
+ .checkbtn{
+    /* tamaño de la fuente  */
+    font-size: 30px;
+    /* color de la fuente  */
+    color: #fff;
+    /* flotar a la derecha  */
+    float: right;
+    /* alineado vertical  */
+    line-height: 80px;
+    /* margen a la derecha  */
+    margin-right: 40px;
+    /* cambiar forma del cursos  */
+    cursor: pointer;
+    /* pantalla no visible */
+    display: none;
+ }
+/* configuracion del id del elemento */ 
+#hamburgesa{
+    display: none;
+}
+section{
+    background-color: cornflowerblue;
+    text-align: center;
+    height: calc(100vh -80px);
+}
+/* configuracion utilizando @media para dentro del elmeto trabajar con resoluciones */
+@media(max-width: 952px) {
+    .link{
+        padding-left: 20px;
+    }
+    nav ul li a {
+        font-size: 16;
+    }
+} 
+@media(max-width: 850px) {
+    .checkbtn{
+        display: block;
+    }
+    ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transform: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    }
+
+</style>
+<!-- primera seccion de la pagina web -->  
+<section>
+    <!-- Etiqueta para colocar un titulo en su mayor tamaño-->
+    <h1>Maquetado de una pagina web con estilo css</h1>
+</section>
+</body>
+</html>

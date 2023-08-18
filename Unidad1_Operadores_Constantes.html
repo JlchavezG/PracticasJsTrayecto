@@ -1,0 +1,40 @@
+<script>
+    /* developer isc. Jose luis chavezG */
+    // una constante es sun valor que no cambiara y permanecera durante la ejecucion del codigo 
+    // la constante pi es un valor que jamas cambiara
+    const pi = 3.1416;
+    // declaramos una varaible numerica asignandole el vaor de 5
+    var radio = 5;
+    // se declara una constante ya que el proceso de la formula del area del circulo es pi * radio al cuadrado
+    const formula = pi * radio * radio; 
+    // se imprime el resultado 
+    document.write("El area del circulo es:"+formula+"<br>");
+    document.write("Vamos a determinar cuantos meses, dias, horas y segundos se llevan si nacieron en el año 1990 <br>");
+    // declaramos las constantes ya que son valores que no cambiaran y podems utlizar dentro del ejercicio
+    const tope = 2023;
+    const meses = 12;
+    const dia = 24;
+    const hora = 60;
+    const minuto = 60;
+    var year = 1990;
+    // calculamos los meses multiplicando los años por los meses
+    var Tmeses = year * meses;
+    // se calcula el total de dias multiplicando el resultado de Tmeses
+    var dias = Tmeses * dia;
+    // se calcula el total de horas de vida tomando el resultado de dias
+    var horas = dias * hora;
+    // se calculan los minutos de vida multiplicando el resultado de las horas * minuto
+    var minutos = horas * minuto;
+    // se imprime el resultado de el total de los meses 
+    document.write("Los meses totales de vida desde 1990 son: "+Tmeses+"<br>");
+    // se imprime el resultado del total de los dias 
+    document.write("Los dias totales de vida desde 1990 son: "+dias+"<br>");
+    // se imprime el resultado del total de Horas
+    document.write("Las horas totales de vida desde 1990 son: "+horas+"<br>");
+    // se imprime el resultado del total de los minutos
+    document.write("Los minutos totales de vida desde 1990 son: "+minutos+"<br>");
+    /* ¿ como podriamos calcular los años de vida con la informacion que ya tenemos ?
+       ¿ que tipo de operadores aritmeticos utilizaremos?
+       ¿ cual sera el proceso para abtraer dicha información ? */
+
+</script>
