@@ -13,6 +13,7 @@
 
         <!-- colocar titulo centrado con un margen superior de 4px span cambio de color de fuente-->
     <h1 class="text-center mt-4">Obtener valores de objetos HTML5 con <span class="text-danger">JavaScript</span></h1>
+    <p class="text-center">utilizando funciones y <span class="text-secondary">documentgetElementById</span></p>
     <!-- div para crear un alinea dentro de la pagina web con un margen superios de 2px -->
         <div class="row mt-2">
             <!-- div en el cual se contendran los elementos de input segun su configuracion -->
@@ -21,7 +22,7 @@
                 identificandolo con el id -->
                 <input type="text" placeholder="Captura un string" class="form-control" id="string">
                 <!-- Este input valida la direccion de un email con HTML5 identificandolo con el id y maegen superior de 2-->
-                <input type="email" placeholder="Captura y valida un Email" class="form-control mt-2" id="email">
+                <input type="email" placeholder="Captura y valida un Email" class="form-control mt-2" id="correo">
                 <!-- este input o caja captura valores numericos dando un valor minimo y maximo sin poder capturar un string-->
                 <input type="number" id="numero" min="1" max="100" placeholder="Seleciona el numero" class="form-control mt-2">
                 <!-- este input funciona como campo de busqueda identificado por el id y dando estilo con bootstrap-->
@@ -51,24 +52,65 @@
             media pantalla -->
             <div class="col-sm-12 col-md-6 col-lg-6">
                 <!-- este imput enmascara el contenido como password-->
-                <input type="password" id="password" placeholder="Digita un password" class="form-control">
+                <input type="password" id="contra" placeholder="Digita un password" class="form-control">
                 <!-- input o caja para almacenar tiempo horas y minutos -->
                 <input type="time" id="tiempo" class="form-control mt-2">
                 <!-- input para almacenar url o direcciones web -->
-                <input type="url"  id="url" class="form-control mt-4" placeholder="Digita la Url">
+                <input type="url"  id="ubicacion" class="form-control mt-4" placeholder="Digita la Url">
                 <!--input para recuperar valor de rango -->
                 <input type="range" id="rango" min="10" max="100" step="10" value="0" class="form-range mt-5">
                 <output class="price-output" for="rango"></output>
+            </div>
+        </div>
+        <div class="row mt-2"> 
+            <div id="respuesta"></div>
+        </div>
+        <div class="row mt-3">
+            <!-- crear el boton con el estilo de bootstrap y el envento onclick que manda llamar la funcion 
+            cadena()-->
+            <div class="col">
+                <button class="btn btn-sm btn-success" onclick="cadena();">Guardar todos los datos</button>
             </div>
         </div>
     </div>
 <!-- se manda llamar el archivo javascript para el uso correcto de bootstrap-->    
 <script src="js/bootstrap.min.js"></script>   
 <script>
-//script de Javascript para retomar los valores dentro de una variable
-let string = document.getElementById('string').value;
-let email  = document.getElementById('email').value; 
-let numero = document.getElementById('numero').value;
+//script de Javascript declarar variables globales 
+let string;
+let electronico;   
+let numero;
+let buscar;
+let calendario;
+let telefono;
+let archivo;
+let color;
+let password;
+let tiempo;
+let url;
+let rango;
+function cadena(){
+    // recuperar los valores y almacenarlos dentro de las variables
+    string = document.getElementById('string').value;
+    electronico = document.getElementById('correo').value;
+    numero = document.getElementById('numero').value;
+    buscar = document.getElementById('busqueda').value;
+    calendario = document.getElementById('calendarios').value;
+    telefono = document.getElementById('telefono').value;
+    archivo = document.getElementById('archivo').value;
+    color = document.getElementById('color').value;
+    password = document.getElementById('contra').value;
+    tiempo = document.getElementById('tiempo').value;
+    url = document.getElementById('ubicacion').value;
+    rango = document.getElementById('rango').value;
+    
+    // imprimir en pantala en el div llamado respuesta los valores obtenidos con JavaScript
+    document.getElementById('respuesta').innerHTML=["El valor es almacenado en la variable string es: "+string+" El valor de el email es: "+electronico+ 
+    " El valor del numero guardado es: "+numero+" el concepto a buscar es: "+buscar+" La fecha almacenada es: "+calendario+" El telefono almacenado es: "+telefono+
+    " El nombre del archivo seleccionado y su ubicacion es : "+archivo+" el codigo de color exadecimal seleccionado es: "+color+" El password ingresado es: "+password+
+    " La hora seleccionado es: "+tiempo+" la url ingresada es: "+url+" y el rango seleccionado es: "+rango]; 
+} 
+
 
 </script>
 </body>
