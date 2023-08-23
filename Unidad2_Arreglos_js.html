@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <title>arreglos array en JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Array con <span class="text-success">JavaScript</span></h1>
+        <div id="arrays" class="text-center"></div>
+        <div id="datos" class="container">
+            <input type="text" id="contenido" placeholder="Agregar Nombres" class="form-control">
+            <ul id="pincipal"></ul> 
+            <button id="insertar" class="btn btn-sm btn-primary">insertar nuevo dato al array </button>
+        </div>
+    </div>
+    <script>
+        // declara la variable que contiene el array 
+        let planetas = [];
+        planetas[0]= "Mercurio";
+        planetas[1]= "Venus";
+        planetas[2]= "Tierra";
+        planetas[3]= "Marte";
+        planetas[4]= "Jupiter";
+        planetas[5]= "Saturno";
+        planetas[6]= "Urano";
+        planetas[7]= "Neptuno";
+        planetas[8]= "Pluton";
+        // nuevoplaneta = planetas.push("Estrella enana");
+        datos = planetas.length;
+        // declarar nuevo array 
+        let arrayEstudiantes = ['Jose Luis','Ricardo','Saul','Paola','David'];
+        function lista(){
+            $('ul').html('');
+            arrayEstudiantes.map((e,key)=>{
+            $('ul').append('<li>'+e+'<li>');
+            });
+        }
+        $("#insertar").click(function(){
+        let valor = $("#contenido").val();
+        arrayEstudiantes.push(valor);
+        lista();
+        $("#datos").val('');
+       })
+       lista();
+
+       
+        document.getElementById('arrays').innerHTML=["El valor del primer arreglo es: "+planetas+" la longitud del arreglo es de: "+datos];
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Ventanas Emergentes con JavaScript</title>
+</head>
+<body>
+    <div class="row mt-4">
+        <div class="container">
+            <h1 class="text-center">Ventanas emergentes y Alertas con <span class="text-primary">JavaScript</span></h1>
+        </div>
+        <div class="container">
+            <div class="row mt-4">      
+                <div class="container justify-content-center">
+                    <div class="col-sm-10 col-md-10 col-lg-10">
+                        <input type="text" id="caja" placeholder="Digita tu nombre" class="form-control">
+                    <button class="btn btn-sm btn-success mt-2" onclick="mensaje();">Saludo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // dentro de el script se pueden abrir ventanas emergentes con la instruccion windows.open + la direccion 
+        // window.open("https://iscjoseluischavezg.mx","iscjlchavezg");
+        // las ventanas emergentes tambien pueden ser alertas io mensajes 
+        // vamos a crear una ventana emergente a travez de un link y funcion con javascript
+        function mensaje(){
+            var nombre = document.getElementById('caja').value;
+            alert("Hola buenos dias "+nombre);
+        }
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
