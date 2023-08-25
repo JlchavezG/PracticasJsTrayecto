@@ -7,31 +7,69 @@
     <title>Ventanas Emergentes con JavaScript</title>
 </head>
 <body>
-    <div class="row mt-4">
-        <div class="container">
-            <h1 class="text-center">Ventanas emergentes y Alertas con <span class="text-primary">JavaScript</span></h1>
-        </div>
-        <div class="container">
-            <div class="row mt-4">      
-                <div class="container justify-content-center">
-                    <div class="col-sm-10 col-md-10 col-lg-10">
-                        <input type="text" id="caja" placeholder="Digita tu nombre" class="form-control">
-                    <button class="btn btn-sm btn-success mt-2" onclick="mensaje();">Saludo</button>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card mt-5">
+                <div class="card-header text-center">
+                    Ventanas emergentes y alertas con <span class="text-success">JavaScript</span>
+                </div>        
+                <div class="row mt-2">
+                    <div class="card-body">
+                        <p>Alertas utilizando funcion simple</p>
+                        <!-- se habilita una caja de texto para recuperar el valor del nombre string-->
+                        <input type="text" id="nombre" placeholder="Digita tu nombre" class="form-control">
+                        <!-- se genera un boton el cual con la funcion oncick genere el evento para llamar a la funcion saludar-->
+                        <button class="btn btn-sm btn-success" onclick="saludar();">Saludar</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script>
-        // dentro de el script se pueden abrir ventanas emergentes con la instruccion windows.open + la direccion 
-        // window.open("https://iscjoseluischavezg.mx","iscjlchavezg");
-        // las ventanas emergentes tambien pueden ser alertas io mensajes 
-        // vamos a crear una ventana emergente a travez de un link y funcion con javascript
-        function mensaje(){
-            var nombre = document.getElementById('caja').value;
-            alert("Hola buenos dias "+nombre);
-        }
-    </script>
+        <div class="row mt-2">
+            <div class="card">
+                <div class="card-header">
+                    <p>Uso de ventanas emergentes con JavaScript</p>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <!-- se genera el link con la direccion apuntando a una accion en javascript cob la funcion popUp y la ruta o Url de 
+                        la ventana emergente -->
+                        <a href="javascript:popUp('https://iscjoseluischavezg.mx')">Link para ingresar a la nueva ventana</a><br>
+                        <a href="javascript:alementoProm()">Link para activar el Prompt</a><br>
+                        <a href="#" onclick="confirmacion()">Link para confirmación de accion con Js</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>        
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        // se genera la funcion saludar 
+        function saludar(){
+            // se declara la variable nombre la cual obtendra el valor de la caja nombre
+            var nombre = document.getElementById('nombre').value;
+            // se envia una alerta con el mensaje concatenando la varible nombre para lograr la alerta
+            alert("Hola Bienvenido: "+nombre+" al mundo del desarrollo FrontEnd con JavaScript");
+        }
+        // se genera la funcion popUp para crear una funcion y ventana emergente nueva 
+        function popUp(URL) {
+            // la instruccion windows open abre nueva ventana emergente + la url nombre de la ventana+ barra de herramientas 1 = si 0 = no 
+            // mas parametros
+            window.open(URL, 'Ventana Emergente IscjlchavezG', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=600,height=600,left = 390,top = 50');
+        }
+        function alementoProm(){
+            mensaje = window.prompt("Hola esta es una manera munsecilla de recuperar valores con una alerta promp ¿como te llamas?");
+            document.write("¿Verdad que es muy sencillo utilizar alertas y elementos emergentes con javascript? "+mensaje);
+
+        } 
+        // creamos la funcion de la confirmacion 
+        function confirmacion(){ 
+            var valor = confirm("Presiona un botón"); 
+                if (valor == true){
+                    alert ("El usuario ha presionado Aceptar");
+                }else{
+                    alert ("El usuario ha presionado Cancelar");
+                }
+        } // fin de la función
+</script>
 </body>
 </html>
